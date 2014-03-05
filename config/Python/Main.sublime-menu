@@ -26,6 +26,20 @@
                         "extend_env": {"PYTHONIOENCODING": "utf-8"}
                         }
                     },
+                    {"command": "repl_open",
+                     "caption": "Python3",
+                     "id": "repl_python3",
+                     "mnemonic": "p",
+                     "args": {
+                        "type": "subprocess",
+                        "encoding": "utf8",
+                        "cmd": ["python3", "-i", "-u"],
+                        "cwd": "$file_path",
+                        "syntax": "Packages/Python/Python.tmLanguage",
+                        "external_id": "python",
+                        "extend_env": {"PYTHONIOENCODING": "utf-8"}
+                        }
+                    },
                     {"command": "python_virtualenv_repl",
                      "id": "python_virtualenv_repl",
                      "caption": "Python - virtualenv"},
@@ -51,6 +65,20 @@
                         "type": "subprocess",
                         "encoding": "utf8",
                         "cmd": ["python", "-u", "$file_basename"],
+                        "cwd": "$file_path",
+                        "syntax": "Packages/Python/Python.tmLanguage",
+                        "external_id": "python",
+                        "extend_env": {"PYTHONIOENCODING": "utf-8"}
+                        }
+                    },
+                    {"command": "repl_open",
+                     "caption": "Python 3 - RUN3 current file",
+                     "id": "repl_python3_run",
+                     "mnemonic": "d",
+                     "args": {
+                        "type": "subprocess",
+                        "encoding": "utf8",
+                        "cmd": ["python3", "-i", "$file_basename"],
                         "cwd": "$file_path",
                         "syntax": "Packages/Python/Python.tmLanguage",
                         "external_id": "python",
